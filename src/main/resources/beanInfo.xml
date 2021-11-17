@@ -17,12 +17,22 @@
 
 <bean class="com.example.di.Member" id="member"></bean>
 
-<bean class="com.example.di.MyObject">
+<bean class="com.example.di.MyObject" id="myObject">
 	<property name="list">
 		<list>
 			<value>영희</value>
 			<value>철수</value>
 		</list>
+	</property>
+	<property name="intArr">
+		<array>
+			<value>1</value>
+			<value>10</value>
+			<value>2</value>
+			<value>8</value>
+			<value>4</value>
+			<value>6</value>
+		</array>
 	</property>
 </bean>
 </beans>
