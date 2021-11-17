@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.example.di.Speaker" id="speacker">
+	<constructor-arg name="volumn">
+		<value>12</value>
+	</constructor-arg>
+	<constructor-arg name="company" value="삼성전자" />
+	<constructor-arg name="serialNum" value="20211117" />
+	<!-- <constructor-arg name="memberObj" ref="member"></constructor-arg> -->
+	<constructor-arg name="memberObj">
+		<ref bean="member"/>
+	</constructor-arg>
+</bean>
+
+<bean class="com.example.di.Member" id="member"></bean>
+
+<bean class="com.example.di.MyObject">
+	<property name="list">
+		<list>
+			<value>영희</value>
+			<value>철수</value>
+		</list>
+	</property>
+</bean>
+</beans>
