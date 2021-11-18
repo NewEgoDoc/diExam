@@ -11,6 +11,7 @@ public class DIAnnotationResultTest {
 		UseMemberBean useMemberBean = ac.getBean("useMemberBean",UseMemberBean.class);
 		
 		System.out.println(useMemberBean);
+		useMemberBean.useExam();
 	}
 
 }

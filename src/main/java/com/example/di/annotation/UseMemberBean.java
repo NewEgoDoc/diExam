@@ -16,6 +16,6 @@ public class UseMemberBean {
 	//@Qualifer: 한정자 
 	
 	public void useExam() {
-		
+		System.out.println(memberBean.toString() +"==========================");
 	}
 }
