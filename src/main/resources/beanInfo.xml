@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <bean class="com.example.di.Speaker" id="speacker">
@@ -17,7 +18,7 @@
 
 <bean class="com.example.di.Member" id="member"></bean>
 
-<bean class="com.example.di.MyObject" id="myObject">
+<bean class="com.example.di.MyObject" id="myObject" c:aaa="홍길동" c:objMember-ref="member">
 	<property name="list">
 		<list>
 			<value>영희</value>
@@ -34,5 +35,12 @@
 			<value>6</value>
 		</array>
 	</property>
+	<property name="props">
+		<props>
+			<prop key="yangdoll">서울시 강남구 대치동</prop>
+			<prop key="gildon">서울시 송파구 잠실동</prop>
+		</props>
+	</property>
 </bean>
+
 </beans>
