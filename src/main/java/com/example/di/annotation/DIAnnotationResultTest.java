@@ -9,6 +9,8 @@ public class DIAnnotationResultTest {
 		ApplicationContext ac = new GenericXmlApplicationContext("beanInfo.xml");
 		
 		UseMemberBean useMemberBean = ac.getBean("useMemberBean",UseMemberBean.class);
+		
+		System.out.println(useMemberBean);
 	}
 
 }
